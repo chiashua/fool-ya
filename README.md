@@ -1,12 +1,26 @@
-# Clone repo 到本地（如果還沒 clone）
-git clone https://github.com/chiashua/fool-ya.git
-cd fool-ya
+import turtle
 
-# 把 flower.py 加入版本控制
-git add flower.py
+screen = turtle.Screen()
+screen.bgcolor("skyblue")
+screen.title("明年會去學插花 🌸")
 
-# 建立 commit
-git commit -m "Add flower.py"
+pen = turtle.Turtle()
+pen.speed(10)
+pen.color("pink")
 
-# 推送到 GitHub
-git push origin main
+for i in range(36):
+    pen.circle(50, 60)
+    pen.left(120)
+    pen.circle(50, 60)
+    pen.left(10)
+
+pen.penup()
+pen.goto(0, -10)
+pen.pendown()
+pen.color("yellow")
+pen.begin_fill()
+pen.circle(10)
+pen.end_fill()
+
+pen.hideturtle()
+turtle.done()
